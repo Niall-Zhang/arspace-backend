@@ -1,0 +1,11 @@
+django
+djangorestframework
+python-dotenv
+psycopg2-binary
+Pillow
+django-cors-headers
+firebase-admin
+boto3
+django-storages
+drf-spectacular
+channels
