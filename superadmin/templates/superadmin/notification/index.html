@@ -1,0 +1,53 @@
+{% extends "master.html" %}
+{% load static %}
+{% block css %}
+{% endblock css %}
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Send Notification</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Send Notification</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-8">
+                    <form id="notification-form" method="POST" action="{% url 'notification' %}">
+                    {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="notification-title">Title</label>
+                                    <input type="text" class="form-control" id="notification-title" name="notification-title" placeholder="Enter Title">
+                                </div>
+                                <div class="form-group mt-3">
+                                    <label for="notification-message">Message</label>
+                                    <textarea class="form-control" id="notification-message" name="notification-message" placeholder="Enter Message"rows="3"></textarea>
+                                </div>
+                    <button type="submit" id="notification-button" class="btn btn-primary mt-3">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
+{% block js %}
+<script>
+    const SEND_MESSAGE_TO_TOPIC_URL = "{% url 'send-notification-to-topics' %}";
+</script>
+<script src="{% static 'assets/admin/js/notification/notification.js' %}"></script>
+{% endblock js %}

@@ -1,0 +1,70 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <!-- start page title -->
+    <div class="row">
+       <div class="col-12">
+          <div class="page-title-box">
+             <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="{% url 'admin-dashboard' %}">Dashboard</a></li>
+                   <li class="breadcrumb-item active">Order Info</li>
+                </ol>
+             </div>
+             <h4 class="page-title">Order Info</h4>
+          </div>
+       </div>
+    </div>
+    <!-- end row -->
+    <div class="row">
+       <div class="col-xl-6">
+          <div class="card">
+             <div class="card-body">
+                <h4 class="header-title mt-0 mb-3">User Information</h4>
+                <hr>
+                <div class="text-start">
+                   <p class="text-muted"><strong>Name :</strong> <span class="ms-2">{{order.user.full_name}}</span></p>
+                   <p class="text-muted"><strong>Email :</strong> <span class="ms-2">{{order.user.email}}</span></p>
+                   <p class="text-muted"><strong>Phone :</strong><span class="ms-2">{{order.user.phone}}</span></p>
+                   <p class="text-muted"><strong>DOB :</strong> <span class="ms-2">{{order.user.dob}}</span></p>
+                   <p class="text-muted"><strong>Gender :</strong> <span class="ms-2">{{order.user.gender}}</span></p>
+                   <p class="text-muted"><strong>Location :</strong> <span class="ms-2">{{order.user.location}}</span></p>
+                   <p class="text-muted"><strong>Stipe Customer Id :</strong> <span class="ms-2">{{order.user.stripe_customer_id}}</span></p>
+                   <p class="text-muted"><strong>Last Login :</strong> <span class="ms-2">{{order.user.last_login}}</span></p>
+                   <p class="text-muted"><strong>Joined Date :</strong> <span class="ms-2">{{order.user.date_joined}}</span></p>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="col-xl-6">
+        <div class="card">
+           <div class="card-body">
+              <h4 class="header-title mt-0 mb-3">Order Information</h4>
+              <hr>
+              <div class="text-start">
+                <p class="text-muted"><strong>Event :</strong> <span class="ms-2">{{order.event.title}}</span></p>
+                <p class="text-muted"><strong>Order Type :</strong> <span class="ms-2">{{order.type}}</span></p>
+                {% if order.type == 'free' %}
+                  <p class="text-muted"><strong>Event Date :</strong> <span class="ms-2">{{order.event.date}}</span></p>
+                {% else %}
+                  <p class="text-muted"><strong>Payment Gateway :</strong> <span class="ms-2">{{order.gateway}}</span></p>
+                  <p class="text-muted"><strong>Status :</strong> <span class="ms-2">{{order.status}}</span></p>
+                  <p class="text-muted"><strong>Total :</strong> <span class="ms-2">{{order.total}}</span></p>
+                  {% for order_item in order.orderitem_set.all %}
+                     <p class="text-muted"><strong>Ticket :</strong> <span class="ms-2">{{order_item.ticket.name}}</span></p>
+                     <p class="text-muted"><strong>Ticket Price :</strong> <span class="ms-2">{{order_item.ticket.price}}</span></p>
+                     <p class="text-muted"><strong>Quantity :</strong> <span class="ms-2">{{order_item.qty}}</span></p>
+                  {% endfor %}
+                  <p class="text-muted"><strong>Order Created At :</strong> <span class="ms-2">{{order.created_at}}</span></p>
+                {% endif %}
+                
+              </div>
+           </div>   
+        </div>
+     </div>
+       <!-- end col-->
+    </div>
+    <!-- end row -->
+ </div>
+{% endblock content %}

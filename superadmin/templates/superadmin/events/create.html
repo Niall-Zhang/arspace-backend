@@ -1,0 +1,53 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <!-- start page title -->
+    <div class="row">
+       <div class="col-12">
+          <div class="page-title-box">
+             <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Add Event</li>
+                </ol>
+             </div>
+             <h4 class="page-title">Add Event</h4>
+          </div>
+       </div>
+    </div>
+    <!-- end page title -->
+    <div class="row">
+       <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form.hidden_fields %}
+                        <div class="fieldWrapper mb-2">
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+
+                    {% for field in form.visible_fields %}
+                        <div class="fieldWrapper mb-2">
+                            {{ field.label_tag }} {{ field }}
+                            {{ field.errors }}
+                        </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary mt-2 me-2"><i class="mdi mdi-basket me-1"></i>Create</button>
+                </form>
+             </div>
+             <!-- end card-body-->
+          </div>
+          <!-- end card-->
+       </div>
+       <!-- end col -->
+    </div>
+    <!-- end row --> 
+ </div>
+{% endblock content %}
+{% block js %} 
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{FCM_SERVER_KEY}}&libraries=places"></script>
+   <script src="{% static 'assets/admin/js/events/create.js' %}"></script>
+{% endblock js %}

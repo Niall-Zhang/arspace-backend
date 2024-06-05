@@ -15,8 +15,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
+from base.v1 import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("dj-admin/", admin.site.urls),
+    # 500 Error Page
+    path("500", views.server_error, name="500"),
+    # Password Reset Token
+    path("password-reset/<str:token>",views.password_reset_token,name="password-reset-token"),
+    # Password Reset Confirm
+    path("password-reset-confirm",views.PasswordResetConfirmView.as_view(),name="password-reset-confirm"),
+    path("admin/", include("superadmin.urls")),
+    path("api/v1/auth/", include("authentication.v1.urls")),    
+    path("api/v1/", include("user.v1.urls")),
+    path("api/v1/", include("base.v1.urls")),
+    path("api/v1/", include("club.v1.urls")),
+    path("api/v1/", include("order.v1.urls")),
+    path("api/v1/", include("chat.v1.urls")),
 ]

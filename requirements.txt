@@ -9,3 +9,9 @@ boto3
 django-storages
 drf-spectacular
 channels
+stripe
+gunicorn
+uvicorn
+fcm-django
+firebase-admin
+django_serverside_datatable

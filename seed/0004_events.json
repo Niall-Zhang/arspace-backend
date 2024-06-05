@@ -1,0 +1,38 @@
+[
+{
+    "model": "club.event",
+    "pk": 1,
+    "fields": {
+        "uuid": "378053eb-b7da-4b4a-94bd-7e7810848cbf",
+        "club": 1,
+        "user": 1,
+        "title": "Night Club",
+        "description": "night club",        
+        "date": "2024-02-12",
+        "time": "05:47:04",
+        "latitude": "564665",
+        "longitude": "564667",
+        "location":"Lorem Ipsum has been the industry's ",
+        "created_at": "2024-02-12T05:47:08.662Z",
+        "updated_at": "2024-02-12T05:47:08.662Z"
+    }
+},
+{
+    "model": "club.event",
+    "pk": 2,
+    "fields": {
+        "uuid": "3d62a414-5165-4b54-b435-3fa98f38f6de",
+        "club": 2,
+        "user": 1,
+        "title": "Day Event",
+        "description": "some description",        
+        "date": "2024-02-12",
+        "time": "05:47:32",
+        "latitude": "564665",
+        "longitude": "564668",
+        "location":"Lorem Ipsum has been the indus test address. ",
+        "created_at": "2024-02-12T05:47:37.613Z",
+        "updated_at": "2024-02-12T05:47:37.613Z"
+    }
+}
+]

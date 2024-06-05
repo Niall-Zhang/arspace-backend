@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "arspace-server",
+  "private_key_id": "da628430ad88cc9ad78511bda34ed2c06ef41797",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC3HVhYaOGzWXRC\n4QzrHmPBtLIBTL7y8RTGFlkkbVZUTamOvu/dDY5tFkjdXQNFAOBeNxUzCDUN/Dg/\nw5d0OwkTWaWK+Rnrtm49Qko3tMtOPLTPpXnXBcmF7EW9WmMJK7zfwbwSCgDSCEUM\niXSvNiw99lQ9uSa5ckjiXcTog6IxpwvoimmfH6XrWIXCcEDj+b+yeD/19D72jcbs\n2Ea1WDxW0HlesHy3q1R8JhP1i4jqCuLdzO8f3xkxNWt0Fva2M5TfdtatayWudX6J\nWuh2mbkUuR5kz3q4W9xBhPFeGeJrNS6N0PQzqew3Lh0E8sK5RBjo1WUUtTBpl3LV\nftVaIlB1AgMBAAECggEAAgZjQC8JRLhElzMktzqAvNcsxdKBxyJjOwXRtiRHqFFF\naRP33NDvoN7t4iZk1bqUa0U8iPqJQYcRxTzg0DhNCsq87hyzfa4kchPHH0PIGE7L\nJq5LLgiuJkvZ/QwigOa5yV/u4tNh5KxweKM4f5QOpqh/KdsKgXQ5fBwn4gXUOwHI\ngIyPStyxEDOEL88g+DUQ+XycBdtOAVxymV8WrAKpiMSbktNX9BCWiY3DBF72CbeC\nvLmC3SL7v2KmzI3pKYmk279phV5V8o/8nSFNalvYbJnojJ6Wr7hcygnrYqqD+yz9\nnXdgRb7v+6duuIsVun6+u5t78uEMoAYCkaFM+N8fIQKBgQDmX/4xZF/vzvhriiC1\n3qF1zIMDaXXJ032ecSlBr/vfBAz+5L4WX7JEyn+KCbnlsJWM2bzIMY5n4S8yAW37\nDlfogpSDobECj+fB3qGRCcQI4V5GY3FbsUY47wOij69ZQWQrQ0JiMHb6UOi/Z9o9\nQlt8jZX/i1xmEQW+V3y46NwKnQKBgQDLe5j37u1UEUqDKBeBFRAYG+P7yh+asp87\nUMUp7ydmKsA/0+7T6ecLsAmqlWz8ipo30E8gOeP2EBbhBQxdgf1BYhZFxWPcM9du\nCv93PdtSjcJh1sQfA0agzVhG8jLHZPUp5CthaV/ImQZtqLQPWa6ZmC+obaduMm5c\nYbOTI4GpuQKBgBFVWafXuIwvk2tr+igU9ysI1zazgaRM4F/CfesuVZIjGOM4zMCc\nNKqOXehB8RXCIo51d4nMiL1yKP3nM6I3IxAgexIoYUwjDbn9iUSDapeMdW5wXwAa\nJ4FzIl/h1byued3zcpQ2t00AN3LnWnlPe9i0Qnv2vV4Em90FciHri1rVAoGAOk2N\nxOyGv+G8cdwY7/lzBRVou4psh8zKZxp7g8pshY+WSjOVaM7KTsT/4Aq0kZ+9FGTx\nZxBvSt/NTmg95MUMJaHPM+qc9Ek+Xt9z11y37O2FVrdMtn4fzI9JzfozpoI85OXl\nsCGbOkTuXJlMDmHp70R101Kn+KEmkf3EkFJKIrECgYBZPEMfztqxSaxDacw5UAOe\nR6aUTiwaefUMGUUXX7/lkt9xufniw7ggPjmE6GYijMZoDjNfkx+KE8ZdYcLqSyXJ\nsrOVlnJVlKkspQ81UdN0cdQw1a7B4PUtqQ9IKrDyawUp79Zzy0IynE/DZpv6PM0U\n4W5SrC9D6r4Mta8OETKG/Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "arspace-bucket-sevice-account@arspace-server.iam.gserviceaccount.com",
+  "client_id": "103662533544913257382",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/arspace-bucket-sevice-account%40arspace-server.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

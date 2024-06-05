@@ -1,0 +1,70 @@
+{% extends "master.html" %}
+{% load static %}
+{% block css %}
+<link href="{% static 'assets/admin/css/plugins/datatables/bootstrap5.min.css' %}" rel="stylesheet" type="text/css" />
+<link href="{% static 'assets/admin/css/plugins/datatables/responsive.bootstrap5.min.css' %}" rel="stylesheet" type="text/css" />
+{% endblock css %}
+{% block content %}
+<div class="container-fluid">
+    <!-- start page title -->
+    <div class="row">
+       <div class="col-12">
+          <div class="page-title-box">
+             <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Orders List</li>
+                </ol>
+             </div>
+             <h4 class="page-title">Orders List</h4>
+          </div>
+       </div>
+    </div>
+    <!-- end page title -->
+    <div class="row">
+       <div class="col-12">
+          <div class="card">
+             <div class="card-body">
+                <div class="row mb-2">
+                   <div class="col-xl-12">
+                      <div class="text-xl-end mt-xl-0 mt-2">
+                            {% comment %} <button type="button" class="btn btn-light mb-2">Export</button> {% endcomment %}
+                      </div>
+                   </div>
+                   <!-- end col-->
+                </div>
+                <table class="table dt-responsive nowrap w-100" id="orders-list">
+                    <thead class="table-light">
+                        <tr>
+                        <th>User</th>
+                        <th>Event</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Created At</th>
+                        <th style="width: 125px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+             </div>
+             <!-- end card-body-->
+          </div>
+          <!-- end card-->
+       </div>
+       <!-- end col -->
+    </div>
+    <!-- end row --> 
+ </div>
+{% endblock content %}
+{% block js %}
+<!-- Datatables js -->
+<script src="{% static 'assets/admin/js/plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'assets/admin/js/plugins/datatables/bootstrap5.min.js' %}"></script>
+<script src="{% static 'assets/admin/js/plugins/datatables/responsive.min.js' %}"></script>
+<script src="{% static 'assets/admin/js/plugins/datatables/responsive.bootstrap5.min.js' %}"></script>
+<script>
+    const admin_orders_list = "{% url 'admin-orders-list' %}";
+    const GCP_BUCKET_URL = "{{GCP_BUCKET_URL}}";
+</script>
+<script src="{% static 'assets/admin/js/orders/index.js' %}"></script>
+{% endblock js %}

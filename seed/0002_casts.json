@@ -1,0 +1,41 @@
+[
+{
+    "model": "club.cast",
+    "pk": 1,
+    "fields": {
+        "uuid": "180c0ab1-7a25-42b2-9573-1d83d8c8e9ad",
+        "user": 1,
+        "name": "John Doe",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "image": "casts/Max-R_Headshot_1.jpg",
+        "created_at": "2024-02-12T05:42:10.082Z",
+        "updated_at": "2024-02-12T05:42:10.082Z"
+    }
+},
+{
+    "model": "club.cast",
+    "pk": 2,
+    "fields": {
+        "uuid": "9fb5f9cb-1ca2-4fee-b3db-68733e14c7a9",
+        "user": 1,
+        "name": "Cast 2",
+        "description": "some description.",
+        "image": "casts/cast-2.jpg",
+        "created_at": "2024-02-12T05:42:48.483Z",
+        "updated_at": "2024-02-12T05:42:48.484Z"
+    }
+},
+{
+    "model": "club.cast",
+    "pk": 3,
+    "fields": {
+        "uuid": "a5076378-a26c-44d5-a304-8b7435b54ba0",
+        "user": 1,
+        "name": "Cast 3",
+        "description": "some description",
+        "image": "casts/cast-3.jpg",
+        "created_at": "2024-02-12T05:43:03.338Z",
+        "updated_at": "2024-02-12T05:43:03.338Z"
+    }
+}
+]

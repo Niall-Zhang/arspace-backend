@@ -1,0 +1,192 @@
+[
+{
+    "model": "base.interest",
+    "pk": 1,
+    "fields": {
+        "uuid": "619cdd9a-5527-4dfc-97e8-02154188848a",
+        "title": "Painting",
+        "created_at": "2024-01-29T10:08:48.906Z",
+        "updated_at": "2024-01-29T10:08:48.906Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 2,
+    "fields": {
+        "uuid": "05de6c97-4500-4436-8be6-d2190ea1275e",
+        "title": "Bird Watching",
+        "created_at": "2024-01-29T10:08:55.854Z",
+        "updated_at": "2024-01-29T10:08:55.854Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 3,
+    "fields": {
+        "uuid": "5e525919-49a7-4280-b4e2-0d3d793f96fa",
+        "title": "Knitting",
+        "created_at": "2024-01-29T10:09:05.805Z",
+        "updated_at": "2024-01-29T10:09:05.805Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 4,
+    "fields": {
+        "uuid": "8eafd8d3-e2d4-4103-8c0b-16bd34a0721b",
+        "title": "Photography",
+        "created_at": "2024-01-29T10:09:11.077Z",
+        "updated_at": "2024-01-29T10:09:11.077Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 5,
+    "fields": {
+        "uuid": "ead42fc4-6129-4db2-aca2-f018da61e55b",
+        "title": "Sculpting",
+        "created_at": "2024-01-29T10:09:19.265Z",
+        "updated_at": "2024-01-29T10:09:19.265Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 6,
+    "fields": {
+        "uuid": "42e93f1a-2dbf-429e-811b-ce7664a4dc6d",
+        "title": "Playing Chess",
+        "created_at": "2024-01-29T10:09:24.253Z",
+        "updated_at": "2024-01-29T10:09:24.253Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 7,
+    "fields": {
+        "uuid": "fa341801-8923-456a-90a2-71b0e9b39aee",
+        "title": "Gardening",
+        "created_at": "2024-01-29T10:09:32.576Z",
+        "updated_at": "2024-01-29T10:09:32.576Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 8,
+    "fields": {
+        "uuid": "53a89f30-d8c0-4b65-89f4-2e59c6fd55c6",
+        "title": "Collecting Stamps",
+        "created_at": "2024-01-29T10:09:41.109Z",
+        "updated_at": "2024-01-29T10:09:41.109Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 9,
+    "fields": {
+        "uuid": "e8d6f4f6-5a66-4e64-a738-50bc62ff33f5",
+        "title": "Cycling",
+        "created_at": "2024-01-29T10:09:46.321Z",
+        "updated_at": "2024-01-29T10:09:46.321Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 10,
+    "fields": {
+        "uuid": "5e5c2579-bce1-4df6-806c-fd7e77173462",
+        "title": "Hiking",
+        "created_at": "2024-01-29T10:09:49.379Z",
+        "updated_at": "2024-01-29T10:09:49.379Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 11,
+    "fields": {
+        "uuid": "309f50de-9487-457e-859c-46ab9004c0ed",
+        "title": "Writing",
+        "created_at": "2024-01-29T10:09:57.956Z",
+        "updated_at": "2024-01-29T10:09:57.956Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 12,
+    "fields": {
+        "uuid": "543d0e03-1e42-4dd6-ab44-dd9ec95c59ed",
+        "title": "Dancing",
+        "created_at": "2024-01-29T10:10:01.262Z",
+        "updated_at": "2024-01-29T10:10:01.262Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 13,
+    "fields": {
+        "uuid": "ac7a285d-39ac-46f4-bc3c-b7ee773d66f3",
+        "title": "Swimming",
+        "created_at": "2024-01-29T10:10:08.810Z",
+        "updated_at": "2024-01-29T10:10:08.810Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 14,
+    "fields": {
+        "uuid": "0f1b676d-5220-4e5f-9da0-e19652280cc4",
+        "title": "Rock Climbing",
+        "created_at": "2024-01-29T10:10:17.077Z",
+        "updated_at": "2024-01-29T10:10:17.077Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 15,
+    "fields": {
+        "uuid": "c0fb60ee-512f-454b-a9f2-0e8ece1ec8e1",
+        "title": "Reading",
+        "created_at": "2024-01-29T10:10:22.417Z",
+        "updated_at": "2024-01-29T10:10:22.417Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 16,
+    "fields": {
+        "uuid": "6a13c95b-bf1a-4ec2-9735-d69bb57e1701",
+        "title": "Surfing",
+        "created_at": "2024-01-29T10:10:25.873Z",
+        "updated_at": "2024-01-29T10:10:25.873Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 17,
+    "fields": {
+        "uuid": "e18ba489-2dd3-4b19-9664-f3a804edaa7b",
+        "title": "Cooking",
+        "created_at": "2024-01-29T10:10:31.431Z",
+        "updated_at": "2024-01-29T10:10:31.431Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 18,
+    "fields": {
+        "uuid": "80ba82bb-d858-48f0-a660-ad2f81e63177",
+        "title": "Yoga",
+        "created_at": "2024-01-29T10:10:34.028Z",
+        "updated_at": "2024-01-29T10:10:34.028Z"
+    }
+},
+{
+    "model": "base.interest",
+    "pk": 19,
+    "fields": {
+        "uuid": "e4ddd6aa-f82e-4d04-bb24-489bfc172854",
+        "title": "Playing Music Instruments",
+        "created_at": "2024-01-29T10:10:58.886Z",
+        "updated_at": "2024-01-29T10:10:58.886Z"
+    }
+}
+]

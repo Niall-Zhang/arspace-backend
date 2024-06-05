@@ -1,0 +1,35 @@
+[
+{
+    "model": "club.eventcast",
+    "pk": 1,
+    "fields": {
+        "uuid": "2888bb5d-59a0-44ea-8ffe-831fb777c59a",
+        "event": 1,
+        "cast": 1,
+        "created_at": "2024-02-12T05:57:53.576Z",
+        "updated_at": "2024-02-12T05:57:53.576Z"
+    }
+},
+{
+    "model": "club.eventcast",
+    "pk": 2,
+    "fields": {
+        "uuid": "5d7c1da8-4ef4-4190-9ef1-7d4c4731f3f4",
+        "event": 1,
+        "cast": 2,
+        "created_at": "2024-02-12T05:57:58.368Z",
+        "updated_at": "2024-02-12T05:57:58.368Z"
+    }
+},
+{
+    "model": "club.eventcast",
+    "pk": 3,
+    "fields": {
+        "uuid": "08ca94bc-9ed2-426e-8ec1-cf0d685fc89c",
+        "event": 1,
+        "cast": 3,
+        "created_at": "2024-02-12T05:58:03.040Z",
+        "updated_at": "2024-02-12T05:58:03.040Z"
+    }
+}
+]

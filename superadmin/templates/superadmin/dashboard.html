@@ -1,0 +1,311 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+    <!-- Start Content-->
+    <div class="container-fluid">
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                    </ol>
+                </div>
+                <h4 class="page-title">Projects</h4>
+            </div>
+            </div>
+        </div>
+        <!-- end page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card widget-inline">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="card rounded-0 shadow-none m-0">
+                                    <div class="card-body text-center">
+                                        <i class="ri-calendar-event-fill text-muted font-24"></i>
+                                        <h3><span>{{events_count}}</span></h3>
+                                        <a href="{% url 'admin-events' %}"><p class="text-muted font-15 mb-0">Events</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <div class="card rounded-0 shadow-none m-0 border-start border-light">
+                                    <div class="card-body text-center">
+                                        <i class="ri-list-check-2 text-muted font-24"></i>
+                                        <h3><span>{{clubs}}</span></h3>
+                                        <a href="{% url 'admin-clubs' %}"><p class="text-muted font-15 mb-0">Clubs</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <div class="card rounded-0 shadow-none m-0 border-start border-light">
+                                    <div class="card-body text-center">
+                                        <i class="ri-group-line text-muted font-24"></i>
+                                        <h3><span>{{users}}</span></h3>
+                                        <a href="{% url 'admin-users' %}"><p class="text-muted font-15 mb-0">Users</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-2">
+                                <div class="card rounded-0 shadow-none m-0 border-start border-light">
+                                    <div class="card-body text-center">
+                                        <i class="ri-shopping-cart-fill text-muted font-24"></i>
+                                        <h3><span>{{orders_count}}</span></h3>
+                                        <a href="{% url 'admin-orders' %}"><p class="text-muted font-15 mb-0">Orders</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="card rounded-0 shadow-none m-0 border-start border-light">
+                                    <div class="card-body text-center">
+                                        <i class="ri-money-dollar-circle-fill text-muted font-24"></i>
+                                        <h3><span>{{orders_count}}</span></h3>
+                                        <a href="{% url 'admin-orders' %}"><p class="text-muted font-15 mb-0">Sales</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% comment %} <div class="col-sm-6 col-lg-2">
+                                <div class="card rounded-0 shadow-none m-0 border-start border-light">
+                                    <div class="card-body text-center">
+                                        <i class="ri-funds-box-fill text-muted font-24"></i>
+                                        <h3><span>{{orders_count}}</span></h3>
+                                        <a href="{% url 'admin-orders' %}"><p class="text-muted font-15 mb-0">Sales</p></a>
+                                    </div>
+                                </div>
+                            </div> {% endcomment %}
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+                <!-- end card-box-->
+            </div>
+            <!-- end col-->
+        </div>
+        <!-- end row-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-title">Sales</h4>            
+                <div class="card">
+                    <div id="chart" style="min-height: 365px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="header-title">Recent Orders</h4> 
+                    </div> 
+                    <div class="card-body pt-2">
+                        <div class="table-responsive">
+                            <table class="table table-centered table-nowrap table-hover mb-0">
+                                <thead>
+                                    <th>Event</th>
+                                    <th>User</th>
+                                    <th>Total</th>
+                                    <th>Created At</th>
+                                    <th>Action</th>
+                                </thead>
+                                <tbody>
+                                    {% for order in orders %}
+                                        <tr>
+                                            <td>
+                                                <h5 class="font-14 my-1"><a href="javascript:void(0);" class="text-body">{{order.event.title}}</a></h5>
+                                            </td>
+                                            <td> 
+                                                <h5 class="font-14 my-1"><a href="javascript:void(0);" class="text-body">{{order.user.email}}</a></h5>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-14 mt-1 fw-normal">{{order.total}}</h5>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-14 mt-1 fw-normal">{{order.created_at}}</h5>
+                                            </td>
+                                            <td class="table-action" style="width: 90px;">
+                                                <a href="{% url 'admin-orders-info' order.uuid %}" class="action-icon"> <i class="mdi mdi-eye"></i></a>
+                                            </td>
+                                        </tr>                                    
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end table-responsive-->
+                    </div>
+                    <!-- end card body-->
+                </div>
+            <!-- end card -->
+            </div>
+            <!-- end col-->
+        </div>
+        <!-- end row-->
+        <div class="row">
+            <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="header-title">Recent Events</h4>
+                </div>
+                <div class="card-body pt-2">
+                        <div class="table-responsive">
+                            <table class="table table-centered table-nowrap table-hover mb-0">
+                                <thead>
+                                    <th>Title</th>
+                                    <th>Date</th>
+                                    <th>Created At</th>
+                                    <th>Action</th>
+                                </thead>
+                                <tbody>
+                                    {% for event in events %}
+                                        <tr>
+                                            <td> 
+                                                <h5 class="font-14 my-1"><a href="javascript:void(0);" class="text-body">{{event.title}}</a></h5>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-14 mt-1 fw-normal">{{event.date}} - {{event.time}}</h5>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-14 mt-1 fw-normal">{{event.created_at}}</h5>
+                                            </td>
+                                            <td class="table-action" style="width: 90px;">
+                                                <a href="{% url 'admin-events-edit' event.uuid %}" class="action-icon"> <i class="mdi mdi-eye"></i></a>
+                                            </td>
+                                        </tr>                                    
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end table-responsive-->
+                    </div>
+                <!-- end card body-->
+            </div>
+            <!-- end card -->
+            </div>
+            <!-- end col-->
+        </div>
+    </div>
+    <!-- container -->
+{% endblock content %}
+{% block js %}
+<script>
+    const get_total_sale_url = "{% url 'get-total-sale' %}";
+</script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+
+    function append_sale_chart(data){
+        
+        let options = {
+            series: [{
+            name: 'Sales',
+            //data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+            data: data
+        }],
+            chart: {
+            height: 350,
+            type: 'bar',
+        },
+        plotOptions: {
+            bar: {
+            borderRadius: 10,
+                dataLabels: {
+                    position: 'top', // top, center, bottom
+                },
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            formatter: function (val) {
+                return "$" + val;
+            },
+            offsetY: -20,
+            style: {
+                fontSize: '12px',
+                colors: ["#304758"]
+            }
+        },
+        
+        xaxis: {
+            categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            position: 'top',
+            axisBorder: {
+                show: false
+            },
+            axisTicks: {
+                show: false
+            },
+            crosshairs: {
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                    colorFrom: '#D8E3F0',
+                    colorTo: '#BED1E6',
+                    stops: [0, 100],
+                    opacityFrom: 0.4,
+                    opacityTo: 0.5,
+                    }
+                }
+            },
+            tooltip: {
+                enabled: true,
+            }
+        },
+        yaxis: {
+            axisBorder: {
+                how: false
+            },
+            axisTicks: {
+                show: false,
+            },
+            labels: {
+                show: false,
+                formatter: function (val) {
+                    return "$" + val;
+                }
+            }
+        
+        },
+        title: {
+            text: 'Total sales in 2024',
+            floating: true,
+            offsetY: 330,
+            align: 'center',
+            style: {
+                color: '#444'
+            }
+        }
+        };
+
+        let chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    }
+
+    // Get Total Sale by month
+    function get_total_sale(){
+        $.ajax({
+            url: get_total_sale_url,  
+            type: 'POST',
+            data:{"csrfmiddlewaretoken":$('input[name="csrfmiddlewaretoken"]').val()},
+            success: function(data) {
+                if(data.success){
+                    let revenue_data = [0,0,0,0,0,0,0,0,0,0,0,0];
+                    for (let i = 0; i < data.data.length; i++) {
+                        let month_index = parseInt(data.data[i]['month']);
+                        revenue_data[month_index] = data.data[i]['total_sale'];
+                    }
+                    // [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2]
+                    // ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                    append_sale_chart(revenue_data);
+                }
+            }  
+        });
+    }
+    
+    
+    get_total_sale();    
+      
+      
+</script>
+
+{% endblock js %}

@@ -1,0 +1,62 @@
+[
+{
+    "model": "club.eventticket",
+    "pk": 1,
+    "fields": {
+        "uuid": "378053eb-b7da-4b4a-94bd-7e7810848cbf",
+        "name": "Tier 1",
+        "event": 1,
+        "price": 20.0,
+        "units": 50,
+        "left": 50,
+        "currency": "$",
+        "created_at": "2024-02-12T05:47:08.662Z",
+        "updated_at": "2024-02-12T05:47:08.662Z"
+    }
+},
+{
+    "model": "club.eventticket",
+    "pk": 2,
+    "fields": {
+        "uuid": "378053eb-b7da-4b4a-94bd-7e7810848cbe",
+        "name": "Tier 2",
+        "event": 1,
+        "price": 30.0,
+        "units": 50,
+        "left": 50,
+        "currency": "$",
+        "created_at": "2024-02-12T05:47:08.662Z",
+        "updated_at": "2024-02-12T05:47:08.662Z"
+    }
+},
+{
+    "model": "club.eventticket",
+    "pk": 3,
+    "fields": {
+        "uuid": "378053eb-b7da-4b4a-94bd-7e7810844cbe",
+        "name": "Tier 3",
+        "event": 1,
+        "price": 40.0,
+        "units": 50,
+        "left": 50,
+        "currency": "$",
+        "created_at": "2024-02-12T05:47:08.662Z",
+        "updated_at": "2024-02-12T05:47:08.662Z"
+    }
+},
+{
+    "model": "club.eventticket",
+    "pk": 4,
+    "fields": {
+        "uuid": "378053eb-b7da-4b4a-94bd-7e7810847cbe",
+        "name": "Tier 4",
+        "event": 1,
+        "price": 50.0,
+        "units": 50,
+        "left": 50,
+        "currency": "$",
+        "created_at": "2024-02-12T05:47:08.662Z",
+        "updated_at": "2024-02-12T05:47:08.662Z"
+    }
+}
+]
