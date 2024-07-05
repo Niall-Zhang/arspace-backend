@@ -1,0 +1,86 @@
+{% extends "front/layouts/master.html" %}
+{% load static %}
+{% block content %}
+<div id="privacy-policy">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: June 6, 2024</p>
+
+    <h2>Introduction</h2>
+    <p>Thank you for using our ticket-selling social app (Arspace). We highly value your privacy and data security. This privacy policy outlines how we collect, use, and protect your personal information.</p>
+
+    <h2>Information We Collect</h2>
+    <h3>1. Information You Provide</h3>
+    <p>We may collect the following information when you register an account, purchase tickets, or use the social features of the App:</p>
+    <ul>
+        <li>Name</li>
+        <li>Email address</li>
+        <li>Phone number</li>
+        <li>Payment information</li>
+        <li>Profile details and photos (for social features)</li>
+        <li>Event attendance details</li>
+    </ul>
+
+    <h3>2. Information We Collect Automatically</h3>
+    <p>We may automatically collect the following information when you use the App:</p>
+    <ul>
+        <li>Device information (e.g., device model, OS version)</li>
+        <li>IP address</li>
+        <li>Location information (with your consent)</li>
+        <li>Usage data (e.g., pages visited, links clicked)</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <p>We use the information we collect for the following purposes:</p>
+    <ul>
+        <li>To provide and maintain our services</li>
+        <li>To process your orders and payments</li>
+        <li>To facilitate your participation in events</li>
+        <li>To improve the App’s functionality and user experience</li>
+        <li>To communicate with you and provide customer support</li>
+        <li>To send service-related notifications</li>
+        <li>To prevent fraud and abuse</li>
+        <li>To comply with legal obligations</li>
+    </ul>
+
+    <h2>Ticket Purchases and Event Participation</h2>
+    <p>When you purchase tickets through the App, we collect payment information and other details necessary to complete the transaction. This information is used solely for processing your order and facilitating your attendance at the event.</p>
+    <p>We may share your information with event organizers to ensure your participation and to provide you with event-related updates and information.</p>
+    <p>We are not responsible for the privacy practices of event organizers. We recommend you review the privacy policies of any event organizers whose events you attend.</p>
+
+    <h2>Information Sharing and Disclosure</h2>
+    <p>We do not share your personal information with third parties except in the following cases:</p>
+    <ul>
+        <li>With your explicit consent</li>
+        <li>With partners to provide our services</li>
+        <li>To comply with legal obligations or respond to legal requests</li>
+        <li>To protect our rights, property, or safety</li>
+        <li>With event organizers to facilitate your participation in events</li>
+    </ul>
+
+    <h2>Data Security</h2>
+    <p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is completely secure.</p>
+
+    <h2>Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the following rights regarding your personal information:</p>
+    <ul>
+        <li>Access your personal information</li>
+        <li>Correct inaccurate or incomplete information</li>
+        <li>Request deletion of your personal information</li>
+        <li>Restrict or object to the processing of your personal information</li>
+        <li>Data portability</li>
+    </ul>
+    <p>To exercise these rights, please contact us using the contact information provided below.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>The App is not intended for children under the age of 13. If we become aware that we have inadvertently collected personal information from children under 13 without parental consent, we will take steps to delete such information promptly.</p>
+
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and, where appropriate, notify you via email or within the App prior to the changes taking effect.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions or concerns about this privacy policy, please contact us at:</p>
+    <p><a href="{% url 'contact' %}">Contact us</a></p>
+
+    <p>Thank you for trusting and using our App.</p>
+</section>
+{% endblock content %}

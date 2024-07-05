@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "appIDs": [
+         "8PS879224Z.com.arspace",
+        ],
+    "details": [
+      {
+        "appID": "8PS879224Z.com.arspace",
+        "paths": ["*"]
+      }
+    ]
+  }
+ "webcredentials": {
+      "apps": [ "8PS879224Z.com.arspace" ]
+   }
+}

@@ -1,0 +1,34 @@
+{% extends "front/layouts/master.html" %}
+{% load static %}
+{% block content %}
+<section id="main">
+    <h2>Welcome to Arspace!</h2>
+    <p>Discover and purchase tickets for the hottest events! And connect with others who share your interests and are attending the same events!</p>
+</section>
+<section id="products">
+    <h3>Turning every night out into a memorable social experience! </h3>
+    <p>Introducing to Arspace App</p>
+    <div class="product-gallery">
+        <div class="product-item" data-aos="fade-up">
+            <img src="{% static 'assets/front/images/1.png' %}" alt="Event 1">
+            <h3>Explore the Hottest Events</h3>
+            <p>Discover the trendiest events nearby, including exclusive collaborations with Vancouver's top nightclubs. Stay in the know and never miss out on the hottest happenings around you.</p>
+        </div>
+        <div class="product-item" data-aos="fade-up">
+            <img src="{% static 'assets/front/images/3.png' %}" alt="Event 2">
+            <h3>Seamless Ticketing Experience</h3>
+            <p>Enjoy the latest in ticketing technology. Our streamlined process makes purchasing tickets quick and easy, so you can focus on the fun ahead.</p>
+        </div>
+        <div class="product-item" data-aos="fade-up">
+            <img src="{% static 'assets/front/images/5.png' %}" alt="Event 3">
+            <h3>Swipe to Match</h3>
+            <p>Connect with like-minded individuals attending the same events as you. Swipe left or right to find your perfect match and make new friends while enjoying your favorite activities.</p>
+        </div>
+        <div class="product-item" data-aos="fade-up">
+            <img src="{% static 'assets/front/images/9.png' %}" alt="Event 3">
+            <h3>Auto-Create Groups or Private Chats</h3>
+            <p>Automatically join group chats with others who have purchased tickets to the same event, or start private conversations to build new connections once you've matched successfully. Socializing has never been easier.</p>
+        </div>
+    </div>
+</section>
+{% endblock content %}

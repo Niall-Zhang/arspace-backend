@@ -1,0 +1,15 @@
+{% extends "front/layouts/master.html" %}
+{% load static %}
+{% block content %}
+<section id="main">
+    <h2>Download our app today！</h2>
+    <div class="app-links">
+        <a href="https://apps.apple.com/us/app/arspace-ticket-date/id6504485151">
+            <img src="{% static 'assets/front/images/apple_store.png' %}" style="width: auto" alt="Download on the App Store">
+        </a>
+        <a href="https://play.google.com/store">
+            <img src="{% static 'assets/front/images/google.png' %}" style="width: auto" alt="Get it on Google Play">
+        </a>
+    </div>
+</section>
+{% endblock content %}

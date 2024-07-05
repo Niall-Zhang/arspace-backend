@@ -1,4 +1,8 @@
+import json
+import os
 import traceback
+
+from django.http import Http404, JsonResponse
 from authentication.serializers import PasswordResetConfirmSerializer
 from rest_framework import generics
 from rest_framework.decorators import permission_classes,api_view
@@ -160,3 +164,15 @@ class PasswordResetConfirmView(generics.GenericAPIView):
                 {SUCCESS: FALSE, ERROR: str(ex)},
                 status=status.HTTP_404_NOT_FOUND,
             )
+    
+#to make file read from well-known folder
+def serve_well_known(request, filename):
+    well_known_dir = os.path.join(os.path.dirname(__file__), '../../.well-known')
+    file_path = os.path.join(well_known_dir, filename)
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        content_type = 'application/json' if filename.endswith('.json') else 'text/plain'
+        return HttpResponse(content, content_type=content_type)
+    except FileNotFoundError:
+        raise Http404(f"{filename} not found")

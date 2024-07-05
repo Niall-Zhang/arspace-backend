@@ -1,0 +1,5 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "com.arspace_technology",
+                 "sha256_cert_fingerprints": ["74:D5:AE:97:23:9B:00:26:B6:30:54:59:D0:23:F1:9A:44:AB:43:F7:CA:8A:0C:8A:23:CA:2A:5D:9D:C7:12:DB"] }
+}]

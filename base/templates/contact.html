@@ -1,0 +1,14 @@
+{% extends "front/layouts/master.html" %}
+{% load static %}
+{% block content %}
+<section id="main">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Reach out to us through the form below, and we'll get back to you as soon as possible. </p>
+    <p>For general enquiries: service@arspace.website.</p>
+    <form>
+        <input type="text" placeholder="Your message" required>
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Send</button>
+    </form>
+</section>
+{% endblock content %}
