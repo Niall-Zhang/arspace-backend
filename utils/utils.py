@@ -22,6 +22,7 @@ from utils.constants import (
 from django.utils.dateformat import format
 from django.utils import timezone
 from datetime import datetime
+import pytz
 
 from dotenv import load_dotenv
 import random, string, os, uuid
@@ -268,3 +269,16 @@ def to_utc_timestamp(type,date):
         return None
     except Exception as ex:
         return str(ex)
+    
+
+# Convert event's date & time into unix timestamps
+def event_to_utc_timestamp(date, time):
+    try:
+        if date is not None:
+            date_time_str = f"{date} {time}" if time else str(date)
+            date_time = datetime.strptime(date_time_str, "%Y-%m-%d %H:%M:%S" if time else "%Y-%m-%d")
+            date_time = timezone.make_aware(date_time, timezone=pytz.utc) if timezone.is_naive(date_time) else date_time
+            return format(date_time, 'U')
+        return None
+    except Exception as ex:
+        return None

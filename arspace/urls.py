@@ -17,8 +17,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from base.v1 import views
+from base import views as frontviews
+from django.views.generic.base import RedirectView
+import os
+
 urlpatterns = [
     path("dj-admin/", admin.site.urls),
+    # Front pages
+    path("", frontviews.home, name="home"),
+    path("product", frontviews.product, name="product"),
+    path("contact", frontviews.contact, name="contact"),
+    path("about", frontviews.about, name="about"),
+    path("privacy-policy", frontviews.privacy_policy, name="privacy_policy"),
+    path("privacy-policy-event-holder", frontviews.privacy_policy_event_holder, name="privacy_policy_event_holder"),
+    path('event/<str:param>/<str:event_id>/', frontviews.platform_redirect, name='platform_redirect'),
+    path('.well-known/<str:filename>', views.serve_well_known, name='serve_well_known'),
+    
     # 500 Error Page
     path("500", views.server_error, name="500"),
     # Password Reset Token

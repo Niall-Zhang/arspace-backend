@@ -3,7 +3,7 @@ from authentication.models import User
 
 # Models
 from club.models import Cast, Club,Event, EventCast, EventImage, EventLike, EventTicket, Ticket
-from utils.utils import get_settings, to_utc_timestamp
+from utils.utils import event_to_utc_timestamp, get_settings, to_utc_timestamp
 from django.utils.dateformat import format
 from django.utils import timezone
 
@@ -170,7 +170,7 @@ class EventSerializer(serializers.ModelSerializer):
             "contact_no": instance.club.contact_no,
         }
         representation['fees'] = int(get_settings('fees')) if get_settings('fees') else 0
-        representation['created_at_utc'] = to_utc_timestamp("date",instance.date)
+        representation['created_at_utc'] = event_to_utc_timestamp(instance.date,instance.time)
         return representation
     
 

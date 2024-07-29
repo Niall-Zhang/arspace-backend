@@ -1,10 +1,18 @@
 ## Run below commands to setup project.
 
-git clone https://github.com/devgeektech/arspace.git
+Install postgres: https://www.postgresql.org/download/
+
+git clone https://github.com/ARSPACE-LTD/arspace-backend.git
 
 cd arspace
 
 mv env.example .env
+
+Change these info to your postgres db informations in .env file:
+
+DB_NAME="arspace"
+DB_USERNAME="postgres"
+DB_PASSWORD="postgres"
 
 python3 -m venv venv
 

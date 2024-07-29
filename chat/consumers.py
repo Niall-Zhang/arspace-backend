@@ -96,14 +96,15 @@ class PrivateRoomChat(AsyncWebsocketConsumer):
             )
 
             messages = await self.get_messages()
-            messages_json = json.dumps(messages)
-            encoded_messages = base64.b64encode(messages_json.encode('utf-8')).decode('utf-8')
+            # messages_json = json.dumps(messages)
+            # encoded_messages = base64.b64encode(messages_json.encode('utf-8')).decode('utf-8')
+            # encoded_messages = messages
             await self.channel_layer.group_send(
                 self.room_group_name,
                 {
                     "type": "chat_message",
                     "message": message,
-                    "messages": encoded_messages,
+                    "messages": messages,
                 },
             )
         except (Exception,AttributeError) as ex:

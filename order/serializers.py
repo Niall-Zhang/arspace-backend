@@ -10,7 +10,7 @@ from user.serializers import UserInterestSerializer
 from django.utils.dateformat import format
 from django.utils import timezone
 
-from utils.utils import to_utc_timestamp
+from utils.utils import event_to_utc_timestamp, to_utc_timestamp
 
 class UUIDRelatedField(serializers.RelatedField):
     def to_representation(self, value):
@@ -69,7 +69,7 @@ class OrderItemSerializer(serializers.ModelSerializer):
             "time": instance.order.event.time,
             "location": instance.order.event.location,
             "images": self.get_event_images(instance.order.event),
-            "created_at_utc":to_utc_timestamp("created_at",instance.order.event.created_at)
+            "created_at_utc":event_to_utc_timestamp(instance.order.event.date,instance.order.event.time)
         }
         if instance.ticket:
             representation["ticket"] = {
@@ -157,7 +157,7 @@ class OrderSerializer(serializers.ModelSerializer):
             "location": instance.event.location,
             "images": self.get_event_images(instance.event),
             "room": self.get_event_room(instance.event),
-            "created_at_utc": to_utc_timestamp("date",instance.event.date)
+            "created_at_utc": event_to_utc_timestamp(instance.event.date,instance.event.time)
             
         }
         representation["total"] = instance.total
@@ -205,7 +205,7 @@ class EventLimitedSerializer(serializers.ModelSerializer):
         representation["event"] = {
             "uuid": instance.uuid,
             "title": instance.title, 
-            "created_at_utc":to_utc_timestamp("date",instance.date)
+            "created_at_utc":event_to_utc_timestamp(instance.date,instance.time)
         }
         return representation
 
@@ -289,7 +289,7 @@ class OrderHistoryOrderItemSerializer(serializers.ModelSerializer):
             "uuid": instance.order.event.uuid,
             "name": instance.order.event.title,
             "club": instance.order.event.club.title,
-            "created_at_utc":to_utc_timestamp("date",instance.order.event.date)
+            "created_at_utc":event_to_utc_timestamp(instance.order.event.date,instance.order.event.time)
         }
         representation["user"] = {
             "uuid": instance.order.user.uuid,

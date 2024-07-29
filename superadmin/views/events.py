@@ -13,7 +13,7 @@ from utils.constants import BODY, CLUB_CREATED_SUCCESS, CLUB_DELETED_SUCCESS, DE
 from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.geos import Point
 from django.db.models import F
-import logging
+import logging, re
 
 from utils.firebase import send_notifications_using_fcm
 from utils.utils import store_notification
@@ -55,7 +55,7 @@ def create(request):
                     image_ins.save()
 
                 # Create Room
-                title = event.title                
+                title = re.sub(r'[^A-Za-z0-9 ]+', '', event.title)
                 title = title.replace(" ", "-")
                 Room.objects.create(name=title,event=event,type="group")
                 if event.longitude is not None and event.latitude is not None:
